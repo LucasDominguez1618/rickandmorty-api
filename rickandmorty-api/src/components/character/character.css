@@ -1,15 +1,44 @@
 .Personajes {
   display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 3rem;
+  list-style: none;
 }
-
+.fondo2 {
+  background-color: rgb(39, 43, 51);
+}
 .encapsulador {
   display: flex;
-  justify-content: space-between;
+  background-color: #3c3e44;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-left: 0, 75rem;
 }
 
 .ch {
-  padding-left: 50px;
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+  padding-left: 5%;
+}
+.name {
+  font-size: 30px;
+}
+img {
+  border-top-left-radius: 3%;
+  border-bottom-left-radius: 3%;
+}
+
+.lkl {
+  font-size: 18px;
+  color: grey;
+}
+.fs {
+  color: grey;
+}
+.or {
+  font-size: 18px;
 }

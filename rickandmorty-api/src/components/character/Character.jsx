@@ -16,22 +16,29 @@ export function Character() {
   //useEffect
   return (
     <>
-      <ul className="Personajes">
-        {character.map((item, index) => (
-          <li key={index}>
-            <div className="encapsulador">
-              <div className="img">
+      <div className="fondo2">
+        <ul className="Personajes">
+          {character.map((item, index) => (
+            <li key={index}>
+              <div className="encapsulador">
                 <img src={item.image} alt="" />
+
+                <div className="ch">
+                  <h3 className="name">{item.name}</h3>
+                  <p className="doa">
+                    {" "}
+                    {item.status} - {item.species}
+                  </p>{" "}
+                  <p className="ty"> {item.type}</p>
+                  <p className="lkl">Last known location:</p>
+                  <p className="or"> {item.origin.name}</p>
+                  <p className="fs"> First Seen</p>
+                </div>
               </div>
-              <div className="ch">
-                <h3>{item.name}</h3>
-                <p className="doa"> {item.status}</p>
-                <p className="sp"> {item.species}</p>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
