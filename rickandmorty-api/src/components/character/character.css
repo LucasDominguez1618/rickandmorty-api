@@ -8,6 +8,16 @@
 .fondo2 {
   background-color: rgb(39, 43, 51);
 }
+.fondo {
+  background-color: white;
+}
+.titulo {
+  font-size: 7em;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
 .encapsulador {
   display: flex;
   background-color: #3c3e44;
@@ -41,4 +51,10 @@ img {
 }
 .or {
   font-size: 18px;
+}
+.name:hover {
+  color: #ffae17;
+}
+.or:hover {
+  color: #ffae17;
 }
