@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./character.css";
+import { Singlecharacter } from "./Singlecharacter";
+import { Svg } from "./svg";
 export function Character() {
   //useState
   const [character, setCharacter] = useState([]);
@@ -17,45 +19,17 @@ export function Character() {
   //llaves
   //useEffect y useState Hooks
 
-  useEffect(() => {
-    fetch(`https://rickandmortyapi.com/api/character/${primerCapitulo}`)
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }, []);
-
   //useEffect
   return (
     <>
       <div className="Fondo">
+        <Svg className="svg" />
         <h1 className="titulo"> The Rick and Morty API </h1>
       </div>
       <div className="fondo2">
         <ul className="Personajes">
           {character.map((item, index) => (
-            <li key={index}>
-              <div className="encapsulador">
-                <img src={item.image} alt="" />
-
-                <div className="ch">
-                  <h3 className="name">{item.name}</h3>
-                  {item.status === "Alive" ? (
-                    <p className="doa">
-                      {" "}
-                      🟢 {item.status} - {item.species}
-                    </p>
-                  ) : (
-                    <p className="doa">
-                      {" "}
-                      🔴 {item.status} - {item.species}{" "}
-                    </p>
-                  )}
-                  <p className="ty"> {item.type}</p>
-                  <p className="lkl">Last known location:</p>
-                  <p className="or"> {item.origin.name}</p>
-                  <p className="fs"> First Seen</p>
-                </div>
-              </div>
-            </li>
+            <Singlecharacter personajes={item} key={index} />
           ))}
         </ul>
       </div>
