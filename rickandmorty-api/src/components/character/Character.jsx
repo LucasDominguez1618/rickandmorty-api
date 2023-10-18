@@ -23,7 +23,9 @@ export function Character() {
   return (
     <>
       <div className="Fondo">
+        <div className="svg-header">
         <Svg className="svg" />
+        </div>
         <h1 className="titulo"> The Rick and Morty API </h1>
       </div>
       <div className="fondo2">
