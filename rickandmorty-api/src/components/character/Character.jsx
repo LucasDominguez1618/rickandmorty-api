@@ -2,14 +2,29 @@ import { useEffect, useState } from "react";
 import "./character.css";
 import { Singlecharacter } from "./Singlecharacter";
 import { Svg } from "./svg";
-export function Character() {
+
+
+
+
+export  function Character() {
   //useState
   const [character, setCharacter] = useState([]);
   const primerCapitulo = [];
-  character.map((item) => {
-    primerCapitulo.push(item.episode[0]);
-  });
-  console.log(primerCapitulo);
+  
+  function Episodios(episodes){
+    episodes.map((item)=>{
+
+      const numeros = item.slice(0,42)
+      primerCapitulo.push(numeros)      
+
+
+    })
+    
+    console.log(primerCapitulo);
+  }
+
+
+
 
   useEffect(() => {
     fetch("https://rickandmortyapi.com/api/character")
@@ -37,4 +52,6 @@ export function Character() {
       </div>
     </>
   );
-}
+
+          }
+          

@@ -1,9 +1,12 @@
+import { Character } from "./Character.jsx";
 export function Singlecharacter(props) {
   const { personajes, index } = props;
   const { status, image, species, name, origin, id, created, type } =
     personajes;
 
+
   return (
+
     <li key={index}>
       <div className="encapsulador">
         <img src={image} alt="" />
@@ -30,9 +33,11 @@ export function Singlecharacter(props) {
           </div>
           <div className="interlineado3">
             <p className="fs"> First Seen</p>
+            <p onClick = {Character}>Episodios</p>
           </div>
         </div>
       </div>
     </li>
   );
 }
+
