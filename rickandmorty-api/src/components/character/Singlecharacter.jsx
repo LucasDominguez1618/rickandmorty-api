@@ -1,8 +1,40 @@
 import { Character } from "./Character.jsx";
+import { useCharacter } from "../../hooks/useCharacter.js";
+import { useEffect } from "react";
 export function Singlecharacter(props) {
   const { personajes, index } = props;
-  const { status, image, species, name, origin, id, created, type } =
+  const { status, image, species, name, origin, id, created, type,episode } =
     personajes;
+
+  const{episodes,getEpisodeFromCharacter}=useCharacter() 
+
+    const primerCapitulo = [];
+  
+  function episodios(){
+    episode.map((item)=>{
+
+      const numeros = item.slice(40)
+      primerCapitulo.push(numeros)      
+
+
+    })
+    
+    getEpisodeFromCharacter(primerCapitulo);
+    
+  }
+useEffect (()=>{
+
+if (episodes.length>1 ){
+  episodes.map((episode)=>{
+    console.log(episode.name)
+    
+  })
+}else{
+
+  console.log(episodes.name)
+}
+
+},[episodes])
 
 
   return (
@@ -33,7 +65,7 @@ export function Singlecharacter(props) {
           </div>
           <div className="interlineado3">
             <p className="fs"> First Seen</p>
-            <p onClick = {Character}>Episodios</p>
+            <p onClick = {episodios}>Episodios</p>
           </div>
         </div>
       </div>

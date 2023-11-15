@@ -9,20 +9,7 @@ import { Svg } from "./svg";
 export  function Character() {
   //useState
   const [character, setCharacter] = useState([]);
-  const primerCapitulo = [];
   
-  function Episodios(episodes){
-    episodes.map((item)=>{
-
-      const numeros = item.slice(0,42)
-      primerCapitulo.push(numeros)      
-
-
-    })
-    
-    console.log(primerCapitulo);
-  }
-
 
 
 
